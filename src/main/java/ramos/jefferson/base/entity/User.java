@@ -1,6 +1,5 @@
 package ramos.jefferson.base.entity;
 
-import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +12,7 @@ import org.hibernate.envers.Audited;
 @Entity
 @Audited
 @Table(name = "users")
-public class User implements Serializable {
+public class User extends AbstractBaseEntity {
     
     @Id
     @Column(name = "id", nullable = false, updatable = false)

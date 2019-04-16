@@ -43,7 +43,7 @@ public class ExceptionHandlerAdvice {
         return throwException(exception);
     }
 
-    private ResponseEntity throwException(BaseException baseException) {
+    private ResponseEntity throwException(AbstractBaseException baseException) {
         MessageDTO messageDTO = new MessageDTO(baseException.getHttpStatus().value(), baseException.getMessage());
         return new ResponseEntity<>(messageDTO, baseException.getHttpStatus());
     }

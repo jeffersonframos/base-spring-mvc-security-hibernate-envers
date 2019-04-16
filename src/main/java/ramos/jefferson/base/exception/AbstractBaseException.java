@@ -2,7 +2,7 @@ package ramos.jefferson.base.exception;
 
 import org.springframework.http.HttpStatus;
 
-abstract class BaseException extends Exception{
+public abstract class AbstractBaseException extends Exception{
     
     private HttpStatus httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
     
@@ -10,7 +10,7 @@ abstract class BaseException extends Exception{
         return httpStatus;
     }
     
-    public BaseException(String message, HttpStatus httpStatus){
+    public AbstractBaseException(String message, HttpStatus httpStatus){
         super(message);
         this.httpStatus = httpStatus;
     }

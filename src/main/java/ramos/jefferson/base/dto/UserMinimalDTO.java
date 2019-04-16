@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class UserMinimalDTO {
+public class UserMinimalDTO extends AbstractBaseDTO {
     
     @JsonProperty("id")
     private long id;
