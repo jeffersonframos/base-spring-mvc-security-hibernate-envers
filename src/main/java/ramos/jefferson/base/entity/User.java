@@ -12,6 +12,7 @@ import org.hibernate.envers.Audited;
 @Entity
 @Audited
 @Table(name = "users")
+@SuppressWarnings("PersistenceUnitPresent")
 public class User extends AbstractBaseEntity {
     
     @Id
